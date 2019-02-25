@@ -1,18 +1,37 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { css } from "@emotion/core"
 import Layout from "../components/layout"
 
 export default ({ data }) => (
   <Layout>
-    <h1>About {data.site.siteMetadata.title}</h1>
+    <h1
+      css={css`text-align: justify;
+      `}
+    >About {data.site.siteMetadata.title}</h1>
     <p>
       Benjamin Kleeman is an IT student and an aspiring developer. He enjoys music production/recording, spending time with his family, and cooking in his spare time.
     </p>
     <img
-        src="https://images.pexels.com/photos/170290/pexels-photo-170290.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        css={css`
+        height: 25rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+        `}
+        src="https://avatars3.githubusercontent.com/u/20052075?s=460&v=4"
         alt="A smiling picture of the site's creator."
       />
-    <a href="https://www.github.com/bkleeman">Follow me on Github</a>
+    <br></br>
+    <a
+      css={css`
+      display: block;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      `} 
+      href="https://www.github.com/bkleeman">Follow me on Github</a>
   </Layout>
 )
 
